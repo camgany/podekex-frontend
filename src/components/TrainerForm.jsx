@@ -56,7 +56,7 @@ const createTrainer = async (body) => {
           error={formik.touched.id_pokemon && Boolean(formik.errors.id_pokemon)}
           helperText={formik.touched.id_pokemon && formik.errors.id_pokemon}
         />
-        <Button color="primary" variant="contained" fullWidth type="submit">
+        <Button class="btn-login" color="primary" variant="contained" fullWidth type="submit">
           Crear
         </Button>
       </form>

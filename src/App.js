@@ -1,11 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
-import { TrainerForm } from './components/TrainerForm';
+import { PokeCard } from './components/PokeCard';
 
 
 function App() {
   return (
-    <TrainerForm></TrainerForm>
+    <PokeCard></PokeCard>
   );
 }
 
