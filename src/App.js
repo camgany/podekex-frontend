@@ -6,7 +6,7 @@ import API from "./config/api";
 function App() {
   const [trainer, setTrainer] = useState();
   const getTrainerId = async () => {
-    const trainerReponse = await API.get(`/trainer/2`);
+    const trainerReponse = await API.get(`/trainer/1`);
     const { data } = trainerReponse;
     setTrainer(data.trainer[0]);
   };
