@@ -15,23 +15,10 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 export const PokeCard = (props) => {
   const { idPokemon } = props;
   const [name, setName] = React.useState({});
-<<<<<<< HEAD
-  const [expanded, setExpanded] = React.useState(false);
-  const [imagePokemon, setImagePokemon] = React.useState('');
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
-  const getPokemon = async () => {
-    
-    const responsePokemon = await API.get(`${idPokemon}`);
-=======
   const [imagePokemon, setImagePokemon] = React.useState("");
 
   const getPokemon = async () => {
     const responsePokemon = await API.get(`/${idPokemon}`);
->>>>>>> 7db0df08d9c289467581544b5006818beecf9b19
     const { data } = responsePokemon;
     const { name: pokemonName, sprites } = data;
     const { front_default } = sprites;
