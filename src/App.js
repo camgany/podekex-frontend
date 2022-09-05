@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     getTrainerId();
   }, []);
-
+//a
   return <>{trainer && <PokeCard idPokemon={trainer.id_pokemon}></PokeCard>}</>;
 }
 
