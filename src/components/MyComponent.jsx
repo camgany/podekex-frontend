@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import API from "./../config/api";
+//import API from "../config/api";
 
 export const MyComponent = (props) => {
   const { name, setName } = props;

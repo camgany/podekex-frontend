@@ -15,20 +15,25 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-export const PokeCard = () => {
+export const PokeCard = (props) => {
+  const { idPokemon } = props;
   const [name, setName] = React.useState({});
   const [expanded, setExpanded] = React.useState(false);
+  const [imagePokemon, setImagePokemon] = React.useState('');
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   const getPokemon = async () => {
-    const responsePokemon = await API.get("/1");
+    
+    const responsePokemon = await API.get(`${idPokemon}`);
     const { data } = responsePokemon;
-    const { name: pokemonName } = data;
-    setName(name);
-    console.log(pokemonName);
+    const { name: pokemonName, sprites } = data;
+    const { front_default } = sprites;
+    setName(pokemonName);
+    setImagePokemon(front_default);
+    console.log(sprites);
   };
   getPokemon();
   return (
@@ -50,14 +55,12 @@ export const PokeCard = () => {
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image={imagePokemon}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {name}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
