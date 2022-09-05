@@ -14,7 +14,7 @@ function App() {
     getTrainerId();
   }, []);
 
-  return <>{trainer && <PokeCard idPokemon={trainer.id_pokemon}></PokeCard>}</>;
+  return <><h1>Git Action</h1></>;
 }
 
 export default App;
