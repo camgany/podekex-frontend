@@ -16,7 +16,7 @@ export const PokeCard = (props) => {
   const { idPokemon } = props;
   const [name, setName] = React.useState({});
   const [imagePokemon, setImagePokemon] = React.useState("");
-
+  console.log(name);
   const getPokemon = async () => {
     const responsePokemon = await API.get(`/${idPokemon}`);
     const { data } = responsePokemon;
@@ -28,7 +28,8 @@ export const PokeCard = (props) => {
   };
   React.useEffect(() => {
     getPokemon();
-  }, [idPokemon]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Card sx={{ maxWidth: 345 }}>
