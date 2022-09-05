@@ -14,8 +14,7 @@ function App() {
     getTrainerId();
   }, []);
 
-  // return <>{trainer && <PokeCard idPokemon={trainer.id_pokemon}></PokeCard>}</>;
-  return <><h1>Estoy Roto</h1></>
+  return <>{trainer && <PokeCard idPokemon={trainer.id_pokemon}></PokeCard>}</>;
 }
 
 export default App;
