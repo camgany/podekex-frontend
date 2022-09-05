@@ -2,9 +2,15 @@
   "hosting": {
     "public": "build",
     "ignore": [
+<<<<<<< HEAD
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+=======
+     "firebase.json",
+     "**/.*", 
+     "**/node_modules/**"
+>>>>>>> 7db0df08d9c289467581544b5006818beecf9b19
     ]
   }
 }
